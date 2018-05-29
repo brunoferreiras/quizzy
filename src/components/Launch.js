@@ -18,13 +18,13 @@ class Launch extends Component {
             style={styles.logo}
             name="check-circle"
             size={64}
-            color="#4682B4"
+            color="#FFFFFF"
           />
           <TouchableOpacity
             style={styles.button}
             onPress={() => console.log("ENTRAR pressed")}
           >
-            <Icon style={styles.icon} name="user" size={18} color="#4682B4" />
+            <Icon style={styles.icon} name="user" size={18} color="#FFFFFF" />
             <Text style={styles.buttonText}>ENTRAR</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -35,7 +35,7 @@ class Launch extends Component {
               style={styles.icon}
               name="user-plus"
               size={18}
-              color="#4682B4"
+              color="#FFFFFF"
             />
             <Text style={styles.buttonText}>CADASTRAR-SE</Text>
           </TouchableOpacity>
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flex: 1,
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#151019"
   },
   button: {
     flexDirection: "row",
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   buttonText: {
-    color: "#4682B4"
+    color: "#FFFFFF"
   }
 });
 
