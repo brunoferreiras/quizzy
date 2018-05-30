@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   Text,
   ImageBackground,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  StatusBar
 } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 
@@ -13,32 +14,35 @@ class Launch extends Component {
   render() {
     return (
       <TouchableWithoutFeedback>
-        <View style={styles.buttonContainer}>
+        <View style={styles.container}>
+          <StatusBar backgroundColor="#151019" />
           <Icon
             style={styles.logo}
             name="check-circle"
             size={64}
             color="#FFFFFF"
           />
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => console.log("ENTRAR pressed")}
-          >
-            <Icon style={styles.icon} name="user" size={18} color="#FFFFFF" />
-            <Text style={styles.buttonText}>ENTRAR</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => console.log("CADASTRAR-SE pressed")}
-          >
-            <Icon
-              style={styles.icon}
-              name="user-plus"
-              size={18}
-              color="#FFFFFF"
-            />
-            <Text style={styles.buttonText}>CADASTRAR-SE</Text>
-          </TouchableOpacity>
+          <View>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => console.log("ENTRAR pressed")}
+            >
+              <Icon style={styles.icon} name="user" size={18} color="#FFFFFF" />
+              <Text style={styles.buttonText}>ENTRAR</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => console.log("CADASTRAR-SE pressed")}
+            >
+              <Icon
+                style={styles.icon}
+                name="user-plus"
+                size={18}
+                color="#FFFFFF"
+              />
+              <Text style={styles.buttonText}>CADASTRAR-SE</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </TouchableWithoutFeedback>
     );
@@ -51,15 +55,15 @@ const styles = StyleSheet.create({
     width: null,
     height: null
   },
-  logo: {
-    alignSelf: "center",
-    marginBottom: 60
-  },
-  buttonContainer: {
+  container: {
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
     backgroundColor: "#151019"
+  },
+  logo: {
+    alignSelf: "center",
+    marginBottom: 60
   },
   button: {
     flexDirection: "row",
