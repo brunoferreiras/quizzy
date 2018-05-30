@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: "row",
     justifyContent: "center",
-    marginBottom: 10
+    marginBottom: 20
   },
   icon: {
     marginRight: 10
